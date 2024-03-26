@@ -19,6 +19,10 @@ fi
 # Change the root password
 echo "root:$password1" | chpasswd
 
+sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+systemctl restart sshd
+
 # Delete all user accounts except root
 for user in $(cut -d: -f1 /etc/passwd | grep -vE '^(root|halt|sync|shutdown)$'); do
   if [ "$user" != "ubuntu" ]; then
