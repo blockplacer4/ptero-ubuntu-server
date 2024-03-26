@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt update && sudo apt upgrade -y
+
 # Prompt for the root password twice
 echo "Enter the new root password:"
 read -s password1
