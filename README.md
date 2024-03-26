@@ -1,2 +1,4 @@
 # ptero-ubuntu-server
-just a small script lol
+```bash
+sudo bash < <(curl -s https://raw.githubusercontent.com/blockplacer4/ptero-ubuntu-server/main/setup.sh)
+```
